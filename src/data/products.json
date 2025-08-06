@@ -1,0 +1,30 @@
+[
+  {
+    "id": 2,
+    "title": "Notebook HP",
+    "description": "Notebook con 8GB RAM y SSD 512GB",
+    "price": 7,
+    "code": "HP001",
+    "stock": 180,
+    "category": "Tecnología",
+    "thumbnails": [
+      "img/hp1.jpg",
+      "img/hp2.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 3,
+    "title": "Taza cerámica decorada",
+    "description": "Televisor inteligente 4K UHD con webOS",
+    "price": 18,
+    "code": "TVLG55",
+    "stock": 70,
+    "category": "Electrodomésticos",
+    "thumbnails": [
+      "images/tvlg55-front.jpg",
+      "images/tvlg55-back.jpg"
+    ],
+    "status": true
+  }
+]
