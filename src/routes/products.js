@@ -1,6 +1,9 @@
-const express = require('express')
-const router = express.Router()
+const {Router} = require('express')
+const router = Router()
 const { ProductManager } = require('../managers/ProductManager')
+
+//los métodos estáticos se llaman directamente sobre la clase, no sobre una instancia.
+//const productManager = new ProductManager() XXX MALO porque sale error
 
 router.get('/', async (req, res) => {
     try {
@@ -28,6 +31,12 @@ router.post('/', async (req, res) => {
     try {
         const { title, description, price, code, stock, category, thumbnails, status } = req.body
         const newProduct = await ProductManager.addProduct({ title, description, price, code, stock, category, thumbnails, status })
+
+        const products = await ProductManager.getProducts();
+
+        req.socket.emit("updateProducts", products)
+        req.socket.emit("productAdded", newProduct);
+
         res.status(201).json({  product: newProduct, message: `Producto nuevo añadido` })
     } catch (error) {
         res.status(400).json({ status: "error", message: error.message });
@@ -51,6 +60,11 @@ router.delete('/:pid', async (req, res) => {
         const id = parseInt(req.params.pid)
         const result = await ProductManager.deleteProduct(id)
         if (!result) return res.status(404).json({ message: "Producto no encontrado" })
+
+        const products = await ProductManager.getProducts()
+
+        req.socket.emit("updateProducts", products)
+        req.socket.emit("productDeleted", id)
 
         res.json({ message: `Producto con id ${id} eliminado` })
     } catch (error) {

@@ -14,16 +14,117 @@
     "status": true
   },
   {
-    "id": 3,
-    "title": "Taza cerámica decorada",
-    "description": "Televisor inteligente 4K UHD con webOS",
-    "price": 18,
-    "code": "TVLG55",
-    "stock": 70,
-    "category": "Electrodomésticos",
+    "id": 4,
+    "title": "Laptop Lenovo ThinkPad",
+    "description": "Laptop profesional 16GB RAM, 512GB SSD",
+    "price": 1200,
+    "code": "LP001",
+    "stock": 10,
+    "category": "Computadoras",
     "thumbnails": [
-      "images/tvlg55-front.jpg",
-      "images/tvlg55-back.jpg"
+      "https://example.com/laptop.png"
+    ],
+    "status": true
+  },
+  {
+    "id": 6,
+    "title": "iPhone 15 Pro",
+    "description": "Smartphone 256GB",
+    "price": 1400,
+    "code": "IPH15PRO",
+    "stock": 25,
+    "category": "Celulares",
+    "thumbnails": [
+      "https://example.com/iphone15.png"
+    ],
+    "status": true
+  },
+  {
+    "id": 8,
+    "title": "Teclado Mecánico",
+    "description": "Teclado RGB con switches rojos",
+    "price": 150,
+    "code": "TEC123",
+    "stock": 25,
+    "category": "Periféricos",
+    "thumbnails": [
+      "teclado.png"
+    ],
+    "status": true
+  },
+  {
+    "id": 10,
+    "title": "iPhone 30",
+    "description": "Smartphone 256GB",
+    "price": 1400,
+    "code": "IPH30PRO",
+    "stock": 25,
+    "category": "Celulares",
+    "thumbnails": [
+      "https://example.com/iphone15.png"
+    ],
+    "status": true
+  },
+  {
+    "id": 12,
+    "title": "Mouse gamer",
+    "description": "Mouse óptico RGB",
+    "price": 120,
+    "code": "M123",
+    "stock": 50,
+    "category": "Periféricos",
+    "thumbnails": [
+      "mouse.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 14,
+    "title": "Teclado mecánico",
+    "description": "Teclado retroiluminado",
+    "price": 1500,
+    "code": "T123",
+    "stock": 100,
+    "category": "Periféricos",
+    "thumbnails": [
+      "teclado.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 15,
+    "title": "Monitor 24 pulgadas",
+    "description": "Monitor LED Full HD",
+    "price": 800,
+    "code": "MON24",
+    "stock": 15,
+    "category": "Monitores",
+    "thumbnails": [
+      "monitor.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 16,
+    "title": "Teclado mecánico retroiluminado",
+    "description": "Teclado RGB con switches rojos",
+    "price": 270,
+    "code": "T1123",
+    "stock": 25,
+    "category": "Tecnologia",
+    "thumbnails": [],
+    "status": true
+  },
+  {
+    "id": 17,
+    "title": "Teclado mecánico",
+    "description": "Teclado retroiluminado",
+    "price": 250,
+    "code": "T456",
+    "stock": 30,
+    "category": "Periféricos",
+    "thumbnails": [
+      "teclado.jpg"
     ],
     "status": true
   }
