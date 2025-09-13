@@ -2,7 +2,11 @@ const express = require("express")
 const {Server} = require("socket.io")
 const {engine} = require("express-handlebars")
 
-const PORT = 8080
+const mongoose = require("mongoose")
+const { conectarDB } = require("./config/db.js");
+const { config } = require("./config/config.js");
+
+const PORT = config.PORT
 const app = express()
 
 // Routers
@@ -42,3 +46,9 @@ const serverSocket = new Server(serverHTTP)
 serverSocket.on('connection', (socket) => {
   console.log(`Cliente conectado ✅, con id: ${socket.id} `) 
 })
+
+// Comunicacion con MongoDB Atlas
+conectarDB (
+  config.MONGO_URL,
+  config.DB_NAME,
+)

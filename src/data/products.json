@@ -120,6 +120,19 @@
     "title": "Teclado mecánico",
     "description": "Teclado retroiluminado",
     "price": 250,
+    "code": "T455",
+    "stock": 30,
+    "category": "Periféricos",
+    "thumbnails": [
+      "teclado.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 18,
+    "title": "Teclado mecánico",
+    "description": "Teclado retroiluminado",
+    "price": 250,
     "code": "T456",
     "stock": 30,
     "category": "Periféricos",

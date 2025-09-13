@@ -1,22 +1,38 @@
-<h1>Lista de productos (Home)</h1>
+<h1>Listado de productos</h1>
 
-<table border="1" cellpadding="8" cellspacing="0">
-    <thead>
-        <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Categoría</th>
-        <th>Stock</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each products}}
-        <tr>
-            <td>{{this.title}}</td>
-            <td>${{this.price}}</td>
-            <td>{{category}}</td>
-            <td>{{stock}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="products-container">
+    {{#each products}}
+        <div class="product-card">
+            <h2>{{this.title}}</h2>
+            <p>Precio: ${{this.price}}</p>
+            <p>Categoría: {{this.category}}</p>
+            <form action="/api/carts/68c4f065c13f345fdc932064/product/{{this._id}}" method="POST">
+                <button type="submit">🛒 Comprar</button>
+            </form>
+        </div>
+    {{/each}}
+</div>
+
+<hr>
+    <div>
+        <p>Página {{page}} de {{totalPages}}</p>
+    </div>
+<hr>
+
+<!-- Controles de paginación -->
+<div>
+    {{#if hasPrevPage}}
+        <a href="/products?page={{prevPage}}">⬅ Página {{prevPage}}</a>
+    {{/if}}
+    {{#if hasPrevPage}}
+        <a href="/products?page={{prevPage}}">Pág. Ant.</a>
+    {{/if}}
+    {{#if hasNextPage}}
+        <a href="/products?page={{nextPage}}">Pág. Sig.</a>
+    {{/if}}
+    {{#if hasNextPage}}
+        <a href="/products?page={{nextPage}}">Página {{nextPage}} ➡</a>
+    {{/if}}
+</div>
+
+<a href="/products?page={{totalPages}}">Últ. Pág.</a>
